@@ -1,0 +1,48 @@
+name: lung_classifier
+description: Lung Disease Classification using EfficientNetB0 TFLite Model
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # TFLite inference
+  tflite_flutter: ^0.11.0
+  http: ^1.2.1
+  # Image picking (camera + gallery)
+  image_picker: ^1.0.7
+  pdf: ^3.10.7
+  printing: ^5.11.1
+  intl: ^0.18.1
+  open_filex: ^4.3.2
+  path_provider: ^2.1.2
+  share_plus: ^10.1.4
+  # Image processing / resizing
+  image: ^4.1.7
+
+  # UI & icons
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0
+
+  # Animations
+  flutter_animate: ^4.5.0
+
+  # Permission handling
+  permission_handler: ^11.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+#  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/model/covid_classifier_float32.tflite
+    - assets/model/labels.txt
+
